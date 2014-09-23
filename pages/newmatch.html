@@ -1,0 +1,33 @@
+<div class="wrapper">
+	<div class="column">
+		<div class="box emptyBox"></div>
+	</div>
+	<div class="column">
+		<div class="box">
+			<h3>New Match</h3>
+			<div class="newMatch">
+				<label>Team A</label>
+				<select name="teamA" ng-model="teamA" ng-options="opt for opt in team">
+					<option value="">Select Team</option>
+				</select>
+				<label>Team B</label>
+				<select name="teamB" ng-model="teamB" ng-options="opt for opt in team">
+					<option value="">Select Team</option>
+				</select>
+				<label>Toss</label>
+				<select name="toss" ng-model="toss" ng-options="opt for opt in team">
+					<option value="">Select Team</option>
+				</select>
+				<label>Choice</label>
+				<select name="choice" ng-model="choice" ng-options="opt for opt in options">
+					<option value="">Select Choice</option>
+				</select>
+				<a href="#/match" class="buttonLink floatRight">Start Game</a>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="box emptyBox"></div>
+	</div>
+</div>

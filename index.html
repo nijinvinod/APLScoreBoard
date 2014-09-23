@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="aplapp">
+<head>
+	<title>APL Score Board</title>
+	<link rel="stylesheet" href="css/styles.css"/>
+	<link rel="stylesheet" href="css/font-styles.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<script src="js/libs/angular.min.js"></script>
+    <script src="js/libs/angular-route.js"></script>
+</head>
+<body>
+	<header>
+		<a href="#"><div class="iconLeft"><i class="icon-backward"></i></div></a>
+		Avnet Premier League
+		<a href="#/login"><div class="iconRight"><i class="icon-user"></i></div></a>
+	</header>
+	<div ng-view=""></div>
+	<script src="js/controllers/matchController.js"></script>
+	<script src="js/controllers/newmatchController.js"></script>
+	<script src="js/controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+@charset "UTF-8";
+/* Bourbon 4.0.2
+ * http://bourbon.io
+ * Copyright 2011–2014 thoughtbot, inc.
+ * MIT License */
+/* Neat 1.6.0
+ * http://neat.bourbon.io
+ * Copyright 2012–2014 thoughtbot, inc.
+ * MIT License */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/**
+ * Changes the display property used by other mixins called in the code block argument.
+ *
+ * @param {String} $display (block) - Display value to be used within the block. Can be `table` or `block`.
+ *
+ * @example scss
+ *   @include display(table) {
+ *    .display-table {
+ *      @include span-columns(6);
+ *     }
+ *   }
+ *
+ * @example css
+ *   // CSS
+ *   .display-table {
+ *      display: table-cell;
+ *      ...
+ *   }
+ */
+/**
+ * Changes the direction property used by other mixins called in the code block argument.
+ *
+ * @param {String} $direction (left-to-right) - Layout direction to be used within the block. Can be `left-to-right` or `right-to-left`.
+ *
+ * @example scss
+ *   @include direction(right-to-left) {
+ *    .right-to-left-block {
+ *      @include span-columns(6);
+ *     }
+ *   }
+ *
+ * @example css
+ *   // CSS
+ *   .right-to-left-block {
+ *     float: right;
+ *      ...
+ *   }
+ */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html, body {
+  background: #F2F2F2;
+}
+
+.clearfix {
+  clear: both;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+a:link, a:hover, a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+button, a.buttonLink {
+  background: #aaaaaa;
+  color: #fff;
+  margin: 10px;
+  width: 100px;
+  padding: 5px 10px;
+  border: 0;
+  text-align: center;
+}
+
+input, select {
+  width: 100%;
+  border: 1px solid #aaa;
+  padding: 5px;
+  height: 30px;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+header {
+  width: 100%;
+  background: #323a45;
+  color: #fff;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  padding: 10px;
+}
+header .iconLeft {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+}
+header .iconRight {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 20px auto;
+}
+.wrapper .column {
+  width: 305px;
+  float: left;
+  margin-left: 20px;
+}
+.wrapper .column.singleColumn {
+  float: none;
+  width: 960px;
+  margin-left: 0;
+}
+.wrapper .column:first-child {
+  margin-left: 0;
+}
+.wrapper .column .box {
+  background: #fff;
+  min-height: 100px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.wrapper .column .box h3 {
+  background: #323a45;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.wrapper .column .box.emptyBox {
+  background: transparent;
+}
+.wrapper .column .box .login {
+  padding: 15px 10px;
+  text-align: center;
+}
+.wrapper .column .box .login input {
+  margin-bottom: 10px;
+}
+.wrapper .column .box .newMatch {
+  padding: 15px;
+}
+.wrapper .column .box .newMatch label {
+  margin-top: 10px;
+  display: block;
+}
+.wrapper .column .box .viewMore {
+  text-align: right;
+  padding: 10px;
+  font-size: 12px;
+}
+.wrapper .column .box .viewMore a {
+  color: #aaa;
+}
+.wrapper .column .box .playerCard {
+  width: 100%;
+  display: table;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+.wrapper .column .box .playerCard.headings {
+  background: #fff;
+  font-size: 12px;
+  color: #333;
+  font-weight: bold;
+}
+.wrapper .column .box .playerCard.active {
+  background: #DDD;
+}
+.wrapper .column .box .playerCard.pointsTab {
+  font-size: 12px;
+}
+.wrapper .column .box .playerCard.broadPad {
+  padding: 10px 0;
+}
+.wrapper .column .box .playerCard .cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.wrapper .column .box .playerCard .cell.ptName {
+  padding: 0 5px;
+  text-align: center;
+}
+.wrapper .column .box .playerCard .cell.avatar {
+  width: 40px;
+  text-align: center;
+}
+.wrapper .column .box .playerCard .cell .playerName {
+  font-size: 14px;
+  font-weight: bold;
+}
+.wrapper .column .box .playerCard .cell .playerHowOut {
+  font-size: 12px;
+  color: #aaa;
+}
+.wrapper .column .box .playerCard .cell.score {
+  width: 40px;
+  text-align: center;
+}
+.wrapper .column .box .playerCard .cell.balls {
+  width: 50px;
+  text-align: center;
+}
+.wrapper .column .box .playerCard .cell.team-name {
+  width: 150px;
+  font-size: 14px;
+}
+.wrapper .column .box .playerCard .cell.matchDate {
+  text-align: center;
+  width: 90px;
+}
+.wrapper .column .box .playerCard .cell.matchDate span {
+  display: block;
+  color: #AAA;
+}
+.wrapper .column .box .playerCard .cell.teamName {
+  text-align: center;
+  font-size: 12px;
+}
+.wrapper .column .box .playerCard .cell.teamName .logo {
+  width: 50px;
+  display: inline-block;
+  height: 50px;
+}
+.wrapper .column .box .addNewBatsman {
+  text-align: center;
+  padding: 10px;
+}
+.wrapper .column .box .addNewBatsman input {
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid #AAA;
+}
+.wrapper .column .box .addNewBatsman .overruns {
+  padding-top: 10px;
+}
+.wrapper .column .box .addNewBatsman .overruns input {
+  width: 35px;
+  padding: 3px;
+  text-align: center;
+}
+.wrapper .column .box .addNewBatsman .overruns button {
+  width: 30px;
+  padding: 5px 0;
+  margin: 0;
+}
+.wrapper .column .box .boxContent {
+  padding: 10px;
+  color: #323a45;
+}
+.wrapper .column .box .boxContent.paddedBox {
+  padding-bottom: 50px;
+}
+.wrapper .column .box .boxContent.centerPadded {
+  border-top: 1px solid #eee;
+}
+.wrapper .column .box .boxContent.centerPadded span {
+  display: inline-block;
+  width: 50px;
+  color: #aaa;
+  font-size: 12px;
+}
+.wrapper .column .box .boxContent.centerPadded span.large {
+  width: 100px;
+}
+.wrapper .column .box .boxContent.centerPadded.lastOne {
+  border-bottom: 1px solid #eee;
+}
+.wrapper .column .box .boxContent .totalScore {
+  text-align: center;
+  font-size: 72px;
+  font-weight: bold;
+}
+.wrapper .column .box .boxContent .playerBox {
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  margin: 10px 20px;
+  text-align: center;
+}
+.wrapper .column .box .boxContent .playerBox.large {
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+.wrapper .column .box .boxContent .playerBox .player-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background: #AAA;
+  display: inline-block;
+}
+.wrapper .column .box .boxContent .playerBox .player-name {
+  font-size: 14px;
+  color: #222;
+}
+.wrapper .column .box .boxContent .playerBox .player-score {
+  font-size: 26px;
+}
+.wrapper .column .box .boxContent .teams {
+  width: 130px;
+  height: 50px;
+  background: #aaaaaa;
+  display: inline-block;
+}
+.wrapper .column .box .boxContent .overruns {
+  width: 215px;
+  text-align: center;
+  margin: 0 auto;
+}
+.wrapper .column .box .boxContent .overruns input {
+  width: 40px;
+  height: 30px;
+  border: 1px solid #aaa;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.wrapper .column .box .boxContent .extBox {
+  display: inline-block;
+  width: 80px;
+  border: 1px solid #AAA;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+}
+.wrapper .column .box .boxContent .extBox .headTag {
+  border-bottom: 1px solid #aaa;
+}
+.wrapper .column .box .boxContent .extBox .bodyTag {
+  display: table;
+  width: 100%;
+}
+.wrapper .column .box .boxContent .extBox .bodyTag .cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.wrapper .column .box .boxContent .extBox .bodyTag .cell:last-child {
+  width: 30px;
+  background: #AAA;
+  border-left: 1px solid #aaa;
+  cursor: pointer;
+}
+.wrapper .column .box .boxContent .extBox .bodyTag .cell.varible {
+  font-size: 30px;
+}
+.wrapper .column .box .bottomBoxContent {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+.wrapper .column .box .bottomBoxContent.inner {
+  position: relative;
+}
+.wrapper .column .box .bottomBoxContent.addScoreContainer {
+  height: 30px;
+}
+.wrapper .column .box .bottomBoxContent ul {
+  border-top: 1px solid #eee;
+}
+.wrapper .column .box .bottomBoxContent ul li {
+  width: 95px;
+  height: 50px;
+  text-align: center;
+  font-size: 12px;
+  display: inline-block;
+  border-left: 1px solid #eee;
+}
+.wrapper .column .box .bottomBoxContent ul li div {
+  font-size: 20px;
+}
+.wrapper .column .box .bottomBoxContent ul li:first-child {
+  border-left: 0;
+}
+.wrapper .column .box .bottomBoxContent ul.scoreAdd {
+  border-top: 1px solid #eee;
+}
+.wrapper .column .box .bottomBoxContent ul.scoreAdd li {
+  width: 40px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.wrapper .column .box .logoBox {
+  font-size: 54px;
+}
+
+.hurricanes {
+  color: lightskyblue;
+}
+
+.strikers {
+  color: #f00;
+}
+
+.scorchers {
+  color: #ff0;
+}
+
+.superstars {
+  color: #254117;
+}
+
+.hurricanesBg {
+  background: lightskyblue;
+  color: #000;
+}
+
+.strikersBg {
+  background: #f00;
+  color: #fff;
+}
+
+.scorchersBg {
+  background: #ff0;
+  color: #000;
+}
+
+.superstarsBg {
+  background: #254117;
+  color: #fff;
+}
+
+.logoBox {
+  border-radius: 50px;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+
+.hurricaneLogoBg {
+  background: url(../images/hurricane.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+
+.scorchersLogoBg {
+  background: url(../images/scorchers.png) no-repeat center;
+  background-size: 100% 100%;
+}
+
+.strikersLogoBg {
+  background: url(../images/strikers.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+
+.superstarsLogoBg {
+  background: url(../images/superstars.png) no-repeat center;
+  background-size: 100% 100%;
+}
+
+.smallLogo {
+  width: 50px;
+  height: 50px;
+}

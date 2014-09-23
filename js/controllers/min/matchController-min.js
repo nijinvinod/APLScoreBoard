@@ -1,0 +1,1 @@
+var matchCtrl={};matchCtrl.init=function(t){t.subView="newMatch",t.startMatch=function(){t.subView="scorecard"}};
